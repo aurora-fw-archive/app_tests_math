@@ -34,13 +34,31 @@ ArSlot_t slot_App_on_open()
 
     printCoord(vecA);
 
+    Shell::Log(Shell::Information, "Normalizing vecA");
+    vecA.normalize();
+
+    printCoord(vecA);
+
     Shell::Log(Shell::Information, "Normalizing the vector into a vecB.");
-    Math::Vector2D vecB = vecA.normalise();
+    Math::Vector2D vecB = vecA.normalized();
 
     printCoord(vecB);
 
     Shell::Log(Shell::Information, "It's magnitude is ", vecB.magnitude());
 
+    Shell::Log(Shell::Information, "The cross product of vecA and vecB is ", vecA.dot(vecB));
+
+    Shell::Log(Shell::Information, "Creating a third vecC.");
+    Math::Vector2D vecC (3, -5);
+
+    printCoord(vecC);
+
+    Shell::Log(Shell::Information, "vecA += vecC");
+    vecA += vecC;
+
+    printCoord(vecA);
+
+    Shell::Log(Shell::Information, "Distance between vecB and vecC: ", vecB.distanceToPoint(vecC));
 }
 
 int main(int argc, char* argv[])

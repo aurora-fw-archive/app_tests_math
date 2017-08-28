@@ -1,4 +1,4 @@
-message(STATUS "Loading tests-math module...")
+message(STATUS "Loading tests-math app...")
 
 if (NOT CONFIGURED_ONCE)
 	set(APP_TESTS_MATH_SOURCE_DIR ${APP_TESTS_MATH_DIR}/src)
