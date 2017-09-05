@@ -23,7 +23,7 @@ using namespace AuroraFW;
 Application* App;
 
 void printCoord(Math::Vector2D vec) {
-    CLI::Log(CLI::Information, "It's coordinates are ", vec.toString());
+    CLI::Log(CLI::Information, "It's coordinates are (", vec.x, ", ", vec.y, ")");
 }
 
 ArSlot_t slot_App_on_open()
