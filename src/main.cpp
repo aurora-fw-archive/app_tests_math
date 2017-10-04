@@ -23,57 +23,57 @@ using namespace AuroraFW;
 Application* App;
 
 void printCoord(Math::Vector2D vec) {
-    CLI::Log(CLI::Information, "It's coordinates are (", vec.x, ", ", vec.y, ")");
+	CLI::Log(CLI::Information, "It's coordinates are (", vec.x, ", ", vec.y, ")");
 }
 
 ArSlot_t slot_App_on_open()
 {
-    CLI::Log(CLI::Information, "Creating new Vector2D vecA.");
-    Math::Vector2D vecA (1, 3);
+	CLI::Log(CLI::Information, "Creating new Vector2D vecA.");
+	Math::Vector2D vecA (1, 3);
 
-    printCoord(vecA);
+	printCoord(vecA);
 
-    CLI::Log(CLI::Information, "Adding 3 to the vector.");
-    vecA.add(3);
+	CLI::Log(CLI::Information, "Adding 3 to the vector.");
+	vecA.add(3);
 
-    printCoord(vecA);
+	printCoord(vecA);
 
-    CLI::Log(CLI::Information, "Substracting 1x and 2y to the vector.");
-    vecA.subtract(1, 2);
+	CLI::Log(CLI::Information, "Substracting 1x and 2y to the vector.");
+	vecA.subtract(1, 2);
 
-    printCoord(vecA);
+	printCoord(vecA);
 
-    CLI::Log(CLI::Information, "Normalizing vecA");
-    vecA.normalize();
+	CLI::Log(CLI::Information, "Normalizing vecA");
+	vecA.normalize();
 
-    printCoord(vecA);
+	printCoord(vecA);
 
-    CLI::Log(CLI::Information, "Normalizing the vector into a vecB.");
-    Math::Vector2D vecB = vecA.normalized();
+	CLI::Log(CLI::Information, "Normalizing the vector into a vecB.");
+	Math::Vector2D vecB = vecA.normalized();
 
-    printCoord(vecB);
+	printCoord(vecB);
 
-    CLI::Log(CLI::Information, "It's magnitude is ", vecB.magnitude());
+	CLI::Log(CLI::Information, "It's magnitude is ", vecB.magnitude());
 
-    CLI::Log(CLI::Information, "The cross product of vecA and vecB is ", vecA.dot(vecB));
+	CLI::Log(CLI::Information, "The cross product of vecA and vecB is ", vecA.dot(vecB));
 
-    CLI::Log(CLI::Information, "Creating a third vecC.");
-    Math::Vector2D vecC (3, -5);
+	CLI::Log(CLI::Information, "Creating a third vecC.");
+	Math::Vector2D vecC (3, -5);
 
-    printCoord(vecC);
+	printCoord(vecC);
 
-    CLI::Log(CLI::Information, "vecA += vecC");
-    vecA += vecC;
+	CLI::Log(CLI::Information, "vecA += vecC");
+	vecA += vecC;
 
-    printCoord(vecA);
+	printCoord(vecA);
 
-    CLI::Log(CLI::Information, "Distance between vecB and vecC: ", vecB.distanceToPoint(vecC));
+	CLI::Log(CLI::Information, "Distance between vecB and vecC: ", vecB.distanceToPoint(vecC));
 }
 
 int main(int argc, char* argv[])
 {
-    App = new Application(slot_App_on_open, argc, argv);
-    delete App;
+	App = new Application(slot_App_on_open, argc, argv);
+	delete App;
 
-    return EXIT_SUCCESS;
+	return EXIT_SUCCESS;
 }
