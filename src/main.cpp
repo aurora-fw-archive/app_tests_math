@@ -26,7 +26,7 @@ void printCoord(Math::Vector2D vec) {
 	CLI::Log(CLI::Information, "It's coordinates are (", vec.x, ", ", vec.y, ")");
 }
 
-ArSlot_t slot_App_on_open()
+afwslot slot_App_on_open()
 {
 	CLI::Log(CLI::Information, "Creating new Vector2D vecA.");
 	Math::Vector2D vecA (1, 3);
