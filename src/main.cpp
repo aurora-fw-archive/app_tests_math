@@ -167,7 +167,6 @@ afwslot slot_App_on_open()
 	AuroraFW::Math::Matrix4x4 matr;
 	CLI::Log(CLI::Information, "sizeof Matrix4x4: ", sizeof(matr));
 	CLI::Log(CLI::Notice, "This should be 64");
-
 }
 
 int main(int argc, char* argv[])
