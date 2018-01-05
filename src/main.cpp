@@ -16,7 +16,9 @@
 ** met: https://www.gnu.org/licenses/gpl-3.0.html.
 ****************************************************************************/
 
-#include <AuroraFW/Aurora.h>
+#include <AuroraFW/Core.h>
+#include <AuroraFW/Math.h>
+#include <AuroraFW/CLI.h>
 
 using namespace AuroraFW;
 
