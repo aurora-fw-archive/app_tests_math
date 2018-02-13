@@ -22,6 +22,6 @@ endif()
 
 add_executable(aurorafw_app_tests_math ${AURORAFW_APP_TESTS_MATH_SOURCE_DIR}/main.cpp)
 
-target_link_libraries(aurorafw_app_tests_math aurorafw-core aurorafw-cli aurorafw-math)
+target_link_libraries(aurorafw_app_tests_math aurorafw-core aurorafw-cli)
 
 set_target_properties(aurorafw_app_tests_math PROPERTIES OUTPUT_NAME aurorafw_app_tests_math.out)
