@@ -54,7 +54,7 @@ void printMatrix(AuroraFW::Math::mat4<T> mat)
 	}
 }
 
-afwslot slot_App_on_open()
+afwslot slot_App_on_open(Application* )
 {
 	CLI::Log(CLI::Information, "Creating new Vector2D vec2A.");
 	Math::Vector2D vec2A (1.0f, 3.0f);
@@ -121,7 +121,7 @@ afwslot slot_App_on_open()
 	printCoord(vec3A);
 
 	CLI::Log(CLI::Information, "Distance between vec3B and vec3C: ", vec3B.distanceToPoint(vec3C));
-	
+
 	CLI::Log(CLI::Information, "Creating new Vector4D vec4A.");
 	Math::Vector4D vec4A (1, 3, 2, 1);
 	printCoord(vec4A);
@@ -164,7 +164,7 @@ afwslot slot_App_on_open()
 
 	CLI::Log(CLI::Information, "sizeof Matrix4x4: ", sizeof(mat));
 	CLI::Log(CLI::Notice, "This should be 64");
-	
+
 	AuroraFW::Math::Vector4D matvec4(3.0f, -5.0f, 1.0f, 2.0f);
 	AuroraFW::Math::Matrix4x4 matr;
 	CLI::Log(CLI::Information, "sizeof Matrix4x4: ", sizeof(matr));
@@ -175,7 +175,7 @@ afwslot slot_App_on_open()
 
 int main(int argc, char* argv[])
 {
-	App = new Application(slot_App_on_open, argc, argv);
+	App = new Application(argc, argv, slot_App_on_open);
 	delete App;
 
 	return EXIT_SUCCESS;
