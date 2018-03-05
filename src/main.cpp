@@ -54,7 +54,7 @@ void printMatrix(AuroraFW::Math::mat4<T> mat)
 	}
 }
 
-afwslot slot_App_on_open(Application* )
+void slot_App_on_open(Application* )
 {
 	CLI::Log(CLI::Information, "Creating new Vector2D vec2A.");
 	Math::Vector2D vec2A (1.0f, 3.0f);
