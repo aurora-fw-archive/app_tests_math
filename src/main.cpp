@@ -42,14 +42,14 @@ void printCoord(AuroraFW::Math::vec4<T> vec)
 	CLI::Log(CLI::Information, "It's coordinates are ", vec.toString());
 }
 
-template<typename T>
-void printMatrix(AuroraFW::Math::mat4<T> mat)
+template<typename T, uint m, uint n>
+void printMatrix(AuroraFW::Math::mat<T, m, n> mat)
 {
 	for(int i = 0; i< 4; i++)
 	{
 		for(int j = 0; j< 4; j++)
 		{
-			CLI::Output << mat.m[i][j] << " ";
+			CLI::Output << mat.matrix[i][j] << " ";
 		}
 	}
 }
